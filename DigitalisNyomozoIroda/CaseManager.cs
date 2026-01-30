@@ -10,6 +10,8 @@ namespace DigitalisNyomozoIroda
 	{
 		List<Case> ugyek;
 
+		internal List<Case> Ugyek { get => ugyek; set => ugyek = value; }
+
 		public CaseManager() 
 		{
 			ugyek = new List<Case>();
