@@ -30,7 +30,8 @@ namespace DigitalisNyomozoIroda
 		public string Cim { get => cim; set => cim = value; }
 		public string Leiras { get => leiras; set => leiras = value; }
 		public string Allapot { get => allapot; set => allapot = value; }
-
+		internal List<Person> Szemelyek { get => szemelyek; set => szemelyek = value; }
+		internal List<Evidence> Bizonyitekok { get => bizonyitekok; set => bizonyitekok = value; }
 
 		public void AllapotModositas(string allapot)
 		{

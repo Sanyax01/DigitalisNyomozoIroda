@@ -34,6 +34,31 @@ namespace DigitalisNyomozoIroda
 		
 		}
 
+		public void Szhozaadas(Person szemely, Case ugy)
+		{
+			foreach (var item in ugyek)
+			{
+				if (item.Ugyazonosito == ugy.Ugyazonosito)
+				{ 
+					item.Szemelyek.Add(szemely);
+				}
+			
+			}
+		
+		}
+
+		public void Bhozaadas(Evidence bizonyitek, Case ugy)
+		{
+			foreach (var item in ugyek)
+			{
+				if (item.Ugyazonosito == ugy.Ugyazonosito)
+				{
+					item.Bizonyitekok.Add(bizonyitek);
+				}
+
+			}
+
+		}
 
 	}
 }
