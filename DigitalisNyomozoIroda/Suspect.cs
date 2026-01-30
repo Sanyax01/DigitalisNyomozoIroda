@@ -10,14 +10,17 @@ namespace DigitalisNyomozoIroda
 	{
 		private Person gyanusitott;
 		private int gyanusszint;
+		private string statusz;
 
-		public Suspect(Person gyanusitott, int gyanusszint)
+		public Suspect(Person gyanusitott, int gyanusszint, string statusz)
 		{
 			this.gyanusitott = gyanusitott;
 			this.gyanusszint = gyanusszint;
+			this.statusz = statusz;
 		}
 
 		public int Gyanusszint { get => gyanusszint; set => gyanusszint = value; }
+		public string Status { get => statusz; set => statusz = value; }
 		internal Person Gyanusitott { get => gyanusitott; set => gyanusitott = value; }
 
 		public override string ToString()
