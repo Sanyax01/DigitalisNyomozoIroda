@@ -30,5 +30,17 @@ namespace DigitalisNyomozoIroda
 		public string Cim { get => cim; set => cim = value; }
 		public string Leiras { get => leiras; set => leiras = value; }
 		public string Allapot { get => allapot; set => allapot = value; }
+
+
+		public void AllapotModositas(string allapot)
+		{
+			this.allapot = allapot;
+			Console.WriteLine("Állapot frissitve");
+		}
+
+		public override string ToString()
+		{
+			return $"Ügyaznositó:{this.ugyazonosito} - {this.cim}\nLEirás: {this.leiras}\n\tÁllapot: {this.allapot}";
+		}
 	}
 }
