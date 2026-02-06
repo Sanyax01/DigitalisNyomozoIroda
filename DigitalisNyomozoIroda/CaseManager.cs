@@ -62,5 +62,16 @@ namespace DigitalisNyomozoIroda
 
 		}
 
+
+		public override string ToString()
+		{
+			string s = "";
+			foreach (var item in ugyek)
+			{
+				s = s + $"Ügy: {item.Leiras}, azonosító: {item.Ugyazonosito}\n";
+			}
+			return s;
+		}
+
 	}
 }
