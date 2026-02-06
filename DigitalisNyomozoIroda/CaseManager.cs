@@ -36,11 +36,11 @@ namespace DigitalisNyomozoIroda
 		
 		}
 
-		public void Szhozaadas(Person szemely, Case ugy)
+		public void Szhozaadas(Person szemely, string ugy)
 		{
 			foreach (var item in ugyek)
 			{
-				if (item.Ugyazonosito == ugy.Ugyazonosito)
+				if (item.Ugyazonosito == ugy)
 				{ 
 					item.Szemelyek.Add(szemely);
 				}
@@ -49,11 +49,11 @@ namespace DigitalisNyomozoIroda
 		
 		}
 
-		public void Bhozaadas(Evidence bizonyitek, Case ugy)
+		public void Bhozaadas(Evidence bizonyitek, string ugy)
 		{
 			foreach (var item in ugyek)
 			{
-				if (item.Ugyazonosito == ugy.Ugyazonosito)
+				if (item.Ugyazonosito == ugy)
 				{
 					item.Bizonyitekok.Add(bizonyitek);
 				}
