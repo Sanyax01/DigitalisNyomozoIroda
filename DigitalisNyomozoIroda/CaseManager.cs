@@ -63,6 +63,7 @@ namespace DigitalisNyomozoIroda
 		}
 
 
+
 		public override string ToString()
 		{
 			string s = "";
