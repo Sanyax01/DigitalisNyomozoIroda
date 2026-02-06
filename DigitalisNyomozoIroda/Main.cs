@@ -8,8 +8,7 @@ namespace DigitalisNyomozoIroda
 {
 	internal class Mainn
 	{
-		static CaseManager cmanager = new CaseManager();
-		static TimeLineEvents timeline = new TimeLineEvents();
+		static DataStore DataStore = new DataStore();
 
 		static void menu()
 		{
@@ -20,63 +19,24 @@ namespace DigitalisNyomozoIroda
 			{
 				if (input == 1)
 				{
-					
-					Console.WriteLine("Új ügy létrehozása:\n");
-					int azo = r.Next(10000,100000);
-					string azonosito = azo.ToString();
-					Console.WriteLine("Cím: ");
-					string cim = Console.ReadLine();
-					Console.WriteLine("Leirás: ");
-					string leiras = Console.ReadLine();
-					Console.WriteLine("Állapot: ");
-					string allapot = Console.ReadLine();
-					Case c = new Case(azonosito,cim,leiras,allapot);
-					cmanager.UgyLetrehozas(c);
+					DataStore.ujugy();
 					input = 0;
-					Console.WriteLine();
+					
 				}
 				if (input == 2)
 				{
-					Console.WriteLine("Új személy ügyhöz hozzáadása:\n");
-					Console.WriteLine("Név: ");
-					string nev = Console.ReadLine();
-					Console.WriteLine("Kor: ");
-					int kor = int.Parse(Console.ReadLine());
-					Console.WriteLine("Megjegyzés: ");
-					string leiras = Console.ReadLine();
-					Console.WriteLine(cmanager);
-					Console.WriteLine("Melyik ügyhöz kivánja hozzá adni a személyt?(adja meg az ügyazonositot) ");
-					string ugy = Console.ReadLine();
-					Person p = new Person(nev,kor,leiras);
-					cmanager.Szhozaadas(p,ugy);
+					DataStore.szemelyekk();
 					input = 0;
-					Console.WriteLine();
 				}
 				if (input == 3)
 				{
-					Console.WriteLine("Új bizonyiték ügyhöz hozzáadása:\n");
-					int azo = r.Next(100, 1000);
-					string azonosito = azo.ToString();
-					Console.WriteLine("Típus: ");
-					string tipus = Console.ReadLine();
-					Console.WriteLine("Leirás: ");
-					string leiras = Console.ReadLine();
-					Console.WriteLine("Megbízhatóság(1-5): ");
-					int megbizhato = int.Parse(Console.ReadLine());
-					Console.WriteLine(cmanager);
-					Console.WriteLine("Melyik ügyhöz kivánja hozzá adni a személyt?(adja meg az ügyazonositot) ");
-					string ugy = Console.ReadLine();
-					Evidence e = new Evidence(azonosito, tipus, leiras, megbizhato);
-					cmanager.Bhozaadas(e, ugy);
+					DataStore.bizonyitekokk();
 					input = 0;
-					Console.WriteLine();
 				}
 				if (input == 4)
 				{
-					Console.WriteLine("Idővonal:");
-					Console.WriteLine(timeline);
+					DataStore.idovonal();
 					input = 0;
-					Console.WriteLine();
 				}
 				if (input == 5)
 				{

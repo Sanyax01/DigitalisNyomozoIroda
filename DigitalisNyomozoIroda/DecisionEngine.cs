@@ -8,5 +8,14 @@ namespace DigitalisNyomozoIroda
 {
 	internal class DecisionEngine
 	{
+		public string Donteshozas()
+		{ 
+		
+		
+		
+		}
+
+
+
 	}
 }

@@ -39,6 +39,8 @@ namespace DigitalisNyomozoIroda
 			Console.WriteLine("Állapot frissitve");
 		}
 
+		
+
 		public override string ToString()
 		{
 			return $"Ügyaznositó:{this.ugyazonosito} - {this.cim}\nLEirás: {this.leiras}\n\tÁllapot: {this.allapot}";
