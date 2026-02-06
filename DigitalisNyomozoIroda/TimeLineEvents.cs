@@ -17,6 +17,7 @@ namespace DigitalisNyomozoIroda
 			events = new List<TimelineEvent>();
 		}
 
+
 		public void Idoponthozzaadas(TimelineEvent ido)
 		{
 			if (ido != null)
