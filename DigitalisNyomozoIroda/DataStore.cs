@@ -152,6 +152,7 @@ namespace DigitalisNyomozoIroda
 			Console.WriteLine("Idővonal:");
 			Console.WriteLine(timeline);
 			Console.WriteLine();
+
 		}
 	}
 }
