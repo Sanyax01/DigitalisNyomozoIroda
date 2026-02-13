@@ -12,11 +12,13 @@ namespace DigitalisNyomozoIroda
 		List<Case> ugyek;
 		List<Person> szemelyek;
 		List<Evidence> bizonyitekok;
+		List<Suspect> gyanyusitottak;
 
 		public List<User> Felhasznalok { get => felhasznalok; set => felhasznalok = value; }
 		public List<Case> Ugyek { get => ugyek; set => ugyek = value; }
 		public List<Person> Szemelyek { get => szemelyek; set => szemelyek = value; }
 		public List<Evidence> Bizonyitekok { get => bizonyitekok; set => bizonyitekok = value; }
+		internal List<Suspect> Gyanyusitottak { get => gyanyusitottak; set => gyanyusitottak = value; }
 
 		public DataStore()
 		{
@@ -24,6 +26,7 @@ namespace DigitalisNyomozoIroda
 			Ugyek = new List<Case>();
 			Szemelyek = new List<Person>();
 			Bizonyitekok = new List<Evidence>();
+			Gyanyusitottak = new List<Suspect>();
 
 		}
 
@@ -44,7 +47,7 @@ namespace DigitalisNyomozoIroda
 		static Witness w1 = new Witness(p4, "Alacsony kopasz, női ruhában volt", "2027.04.05");
 		static TimelineEvent t1 = new TimelineEvent(w1.Datum, $"{w1.Szemtanu.Nev} vallott");
 		static Evidence e1 = new Evidence("027", "digitális adat", "9 terrabite kép női ruhákról", 1);
-		public void Felhasznalotarolas(List<User> users)
+		public void Felhasznalotarolas()
 		{
 			User u = new User("Arion", "4678", "elemző");
 			User u1 = new User("Gobma", "666", "nyomozó");
@@ -54,13 +57,13 @@ namespace DigitalisNyomozoIroda
 			felhasznalok.Add(u2);
 		}
 
-		public void Ugytarolas(List<Case> cases)
+		public void Ugytarolas()
 		{
 			ugyek.Add(c);
 			ugyek.Add(c2);
 		}
 
-		public void Szemelytarolas(List<Person> persons)
+		public void Szemelytarolas()
 		{
 
 			szemelyek.Add(p);
@@ -70,11 +73,28 @@ namespace DigitalisNyomozoIroda
 			szemelyek.Add(p4);
 		}
 
-		public void Bizonyitektarolas(List<Evidence> evidences)
+		public void Gyanusitotttarolas()
+		{
+			gyanyusitottak.Add(s);
+			gyanyusitottak.Add(s1);
+		}
+
+		public void Bizonyitektarolas()
 		{
 			bizonyitekok.Add(e);
 			bizonyitekok.Add(e1);
+			c.Bizonyitekok.Add(e);
+			c2.Bizonyitekok.Add(e1);
 		}
+
+		public void Ugygyan()
+		{
+			c.Gyanusitottak.Add(s);
+			c2.Gyanusitottak.Add(s1);
+		}
+
+
+
 		static CaseManager cmanager = new CaseManager();
 		static TimeLineEvents timeline = new TimeLineEvents();
 		static Random r = new Random();
@@ -154,5 +174,7 @@ namespace DigitalisNyomozoIroda
 			Console.WriteLine();
 
 		}
+
+		
 	}
 }

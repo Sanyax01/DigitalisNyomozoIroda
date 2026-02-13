@@ -14,6 +14,7 @@ namespace DigitalisNyomozoIroda
 		private string allapot;
 		private List<Person> szemelyek;
 		private List<Evidence> bizonyitekok;
+		private List<Suspect> gyanusitottak;
 		
 
 		public Case(string ugyazonosito, string cim, string leiras, string allapot)
@@ -24,6 +25,7 @@ namespace DigitalisNyomozoIroda
 			this.allapot = allapot;
 			this.szemelyek = new List<Person>();
 			this.bizonyitekok = new List<Evidence>();
+			this.gyanusitottak = new List<Suspect>();
 		}
 
 		public string Ugyazonosito { get => ugyazonosito; set => ugyazonosito = value; }
@@ -32,6 +34,7 @@ namespace DigitalisNyomozoIroda
 		public string Allapot { get => allapot; set => allapot = value; }
 		internal List<Person> Szemelyek { get => szemelyek; set => szemelyek = value; }
 		internal List<Evidence> Bizonyitekok { get => bizonyitekok; set => bizonyitekok = value; }
+		internal List<Suspect> Gyanusitottak { get => gyanusitottak; set => gyanusitottak = value; }
 
 		public void AllapotModositas(string allapot)
 		{
