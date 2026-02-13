@@ -73,6 +73,7 @@ namespace DigitalisNyomozoIroda
 			dataStore.Gyanusitotttarolas();
 			dataStore.Bizonyitektarolas();
 			dataStore.Ugygyan();
+			dataStore.hozzarendelesek();
 
 			menu();
 
